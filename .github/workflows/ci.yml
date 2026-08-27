@@ -1,0 +1,30 @@
+name: CI - API-Data-Hora
+
+on:
+  push:
+    Branches:
+      - main
+  
+  pull_request:
+    Branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar codigo
+        uses: actions/checkout@v6
+
+      - name: Configurar node.js
+        uses: actions/setup-node@v7
+        whith:
+          node-version: 20
+
+      - name: Instalar dependencias
+        run: npm CI
+
+      - name: Executar testes
+        run: npm test
+
