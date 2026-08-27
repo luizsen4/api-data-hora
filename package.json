@@ -1,11 +1,12 @@
 {
-  "name": "backend-data-hora",
+  "name": "API-data-hora",
   "version": "1.0.0",
   "description": "Backend Node.js que retorna a data e a hora atuais na rota padrão.",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "node --watch src/server.js"
+    "dev": "node --watch src/server.js",
+    "test": "jest"
   },
   "keywords": [
     "node",
