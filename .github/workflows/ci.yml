@@ -23,7 +23,7 @@ jobs:
           node-version: 20
 
       - name: Instalar dependencias
-        run: npm CI
+        run: npm ci
 
       - name: Executar testes
         run: npm test
