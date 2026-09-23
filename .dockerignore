@@ -1,7 +1,13 @@
 node_modules
+<<<<<<< HEAD
 npm-debug.log
 .git
 .github
 test
 covarage
 README.md
+=======
+.git
+github
+test
+>>>>>>> dd58f881eb2215f3354d24bed83b0b33e0858a6a

@@ -1,12 +1,13 @@
 name: CI - API-Data-Hora
 
+
 on:
   push:
-    Branches:
+    branches:
       - main
   
   pull_request:
-    Branches:
+    branches:
       - main
 
 jobs:
@@ -28,3 +29,12 @@ jobs:
       - name: Executar testes
         run: npm test
 
+  docker:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Baixar codigo
+        uses: actions/checkout@v6
+
+      - name: Construir imagem Docker 
+        run: docker build -t api-data-hora .
